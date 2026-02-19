@@ -10,6 +10,6 @@ This is the code for the ITFwFRaPS or the above written heading
 <img src="/templates/Screenshot-2026-02-19_19:33:17.png" alt="pop" />
 
 Looking at this ,you can see that you can search the tag or just pick it from the cloud as well all the profiles it manages to create, you can rename them .
-<img src="/templates/Screenshot-2026-02-19_19:35:25.png" alt="pop" />
+<img src="/templates/Screenshot-2026-02-19_20:02:41.png" alt="pop" />
 v1 done with ,could be used with some other program 
 could be used to make simple cid tv show face detection tech with better computation and bigger model
