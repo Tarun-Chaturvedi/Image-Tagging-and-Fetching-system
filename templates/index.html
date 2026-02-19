@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Image Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-dark">
+    <div class="container mt-5">
+        <h1>🔍 Image Detector Search</h1>
+	<div class="tag-cloud mb-4 p-3 border rounded bg-white text-center">
+    <h5>🏷️ Detected Objects Cloud</h5>
+    {% for name, count in stats %}
+        <a href="/?tag={{ name }}" 
+           class="badge rounded-pill bg-primary text-decoration-none m-1" 
+           style="opacity: {{ 0.5 + (count * 0.05) }};">
+            {{ name }} <span class="badge bg-light text-dark ms-1">{{ count }}</span>
+        </a>
+    {% endfor %}
+</div>
+<div class="profiles-section mb-4 p-3 border rounded bg-secondary text-white">
+    <h5>👥 Identified People</h5>
+    <div class="d-flex flex-wrap">
+        {% for p_id, name, count in profiles %}
+            <div class="badge bg-light text-dark m-1 p-2">
+                <a href="/?profile_id={{ p_id }}" class="text-decoration-none text-dark">
+                    <strong>{{ name }}</strong> ({{ count }})
+                </a>
+                <form action="/rename/{{ p_id }}" method="post" class="d-inline ms-2">
+                    <input type="text" name="new_name" placeholder="Rename..." size="10" class="form-control-sm border-0">
+                    <button type="submit" class="btn btn-sm btn-warning">✓</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+        <form action="/" method="get" class="mb-4">
+            <input type="text" name="tag" placeholder="Search (e.g., cat, car)" class="form-control mb-2">
+            <button type="submit" class="btn btn-primary w-100">Search</button>
+        </form>
+
+        <div class="row">
+            {% for row in results %}
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="/{{ row[0] }}" class="card-img-top">
+                    <div class="card-body">
+                       <p class="card-text">
+    Confidence: 
+    {% if row[1] is number %}
+        {{ (row[1] * 100)|round(1) }}%
+    {% else %}
+        100%
+    {% endif %}
+</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
