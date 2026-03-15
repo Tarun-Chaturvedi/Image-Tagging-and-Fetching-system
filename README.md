@@ -6,7 +6,7 @@
 
 A full-stack computer vision web application that automatically scans, tags, and organizes images using machine learning. It features object detection, 128D face recognition, and a searchable web gallery.
 
-[**Live Here**]([https://your-vercel-app-link-goes-here.vercel.app](https://image-taggers-and-profilers.vercel.app/?_vercel_share=g8CKKqu3ET2t1wWrqWGqvjrNa3saPjqi))
+[**Live Here**]([https://your-vercel-app-link-goes-here.vercel.app](https://image-taggers-and-profilers.vercel.app/?_vercel_share=g8CKKqu3ET2t1wWrqWGqvjrNa3saPjqi)
 
 ---
 
