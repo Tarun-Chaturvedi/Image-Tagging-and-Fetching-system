@@ -4,7 +4,10 @@
 ![YOLO11s](https://img.shields.io/badge/YOLO-11s-FF9900)
 ![Deployed on Vercel](https://img.shields.io/badge/Deployed-Vercel-black)
 
-A full-stack computer vision web application that automatically scans, tags, and organizes images using machine learning. It features object detection, 128D face recognition, and a searchable web gallery.
+An application that automatically scans, tags, and organizes images using machine learning. It features object detection, 128D face recognition, and a searchable web gallery.
+
+Due to computational liminations,the accurate is not great currently but just switching the model should fix that almost completely.
+My focus was showing feasibily of such project
 
 [**Live Here**](https://image-taggers-and-profilers.vercel.app/?_vercel_share=g8CKKqu3ET2t1wWrqWGqvjrNa3saPjqi)
 
