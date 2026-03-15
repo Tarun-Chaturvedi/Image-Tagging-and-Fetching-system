@@ -1,4 +1,4 @@
-#AI Image Tagger & Face Profiler
+# AI Image Tagger & Face Profiler
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688)
 ![YOLO11s](https://img.shields.io/badge/YOLO-11s-FF9900)
@@ -31,11 +31,3 @@ A full-stack computer vision web application that automatically scans, tags, and
 3. **Embedding:** Faces are isolated, aligned, and converted into 128D mathematical vectors. 
 4. **Matching:** The system calculates the distance between the new face vector and existing profiles in the SQLite database. If a match is found, they are linked; if not, a new profile is created.
 5. **Serving:** The FastAPI application queries the SQLite database to render the web gallery, allowing users to filter by specific tags or face profiles.
-
-
-To run the full read/write application (including the YOLO scanner) on your local machine:
-
-### 1. Clone the repository
-```bash
-git clone [https://github.com/Tarun-Chaturvedi/Image-Tagger-and-Profiler.git](https://github.com/Tarun-Chaturvedi/Image-Tagger-and-Profiler.git)
-cd Image-Tagger-and-Profiler
